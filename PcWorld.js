@@ -160,6 +160,9 @@ class Order{
                 console.log("........................................................")
             }
         }
+        else{
+            console.log("ERROR: There is not any information.")
+        }
     }
 }
 
@@ -167,7 +170,6 @@ let order = new Order();
 let display = new Display("Noblex", 24.3);
 let keyboard = new Keyboard("Wireless", "Hyperx");
 let mouse = new Mouse("Wired","Ryzen");
-order.addComputer(new Computer("HP", display, keyboard, mouse));
 order.addComputer(new Computer("HP", display, keyboard, mouse));
 
 let displayTwo = new Display("Sony", 21);
