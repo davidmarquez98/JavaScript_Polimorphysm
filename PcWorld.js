@@ -134,16 +134,16 @@ class Computer{
 
 class Order{
     static orderAccountant = 0;
+    static computers = [];
 
     constructor(){
         this._orderId= ++Order.orderAccountant;
-        this.computers = [];
     }
 
     addComputer(computer){
         if(computer != null)
         {
-            this.computers.push(computer);
+            Order.computers.push(computer);
         }
     }
 
@@ -152,11 +152,11 @@ class Order{
     }
 
     showOrder(){
-        if(this.computers.length != 0)
+        if(Order.computers.length != 0)
         {
             console.log("_ Order ID: " + this.orderId);
-            for(let i = 0;i < this.computers.length;i++){
-                console.log(this.computers[i].toString());
+            for(let i = 0;i < Order.computers.length;i++){
+                console.log(Order.computers[i].toString());
                 console.log("........................................................")
             }
         }
